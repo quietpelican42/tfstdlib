@@ -1,0 +1,8 @@
+%{ for g, members in groups }
+${g}:
+%{ for m in members }
+  - ${m}
+%{ endfor }
+%{ if length(members) == 0 }  (none)
+%{ endif }
+%{ endfor }
